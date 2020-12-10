@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Forside</title>
+        
+        <meta charset="UTF-8">
+        <meta name="keywords" content="Keywords, nøgleord for din side">
+        <meta name="description" content="Lav en beskrivelse af, hvad din side handlseer om">
+        <!-- Link til stylesheet responsive.css - det kan du ændre i -->
+        <link rel="stylesheet" type="text/css" href="responsive.css">
+    </head>
+    <body>
+        <!-- Her sættes "container" som en ramme for siden -->
+        <div class="container">
+            <!-- Her sættes "top" med et billede -->
+            <div class="top">
+               <img src="Billeder/hjemmeside logo.png" width="100%" height="100%" alt=""/>
+            </div>
+            <!-- Her indsættes menuen - bemærk, der er ingen links - du skal selv oprette sider! -->
+            
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            
+           
+        
+            
+            <div class="menu">
+
+                <ul>
+                    <li><a href="Forside.html">Forside</a></li>
+                    <li><a href="Kryptering.html">Kryptering</a></li>
+
+                </ul>
+
+            </div>
+
+            
+            
+            
+          
+           <!--Vi sætter flere div for at i et html dokument for at det ikke er det samme der skal ske flere steder på hele siden, f.eks her vil have nogle ting i midten men måske senere have nogle ting til højre/ventre-->
+            <div class="midten">
+
+                <input type="text" placeholder="Tekst" id="input" />
+                <input type="button" value="Krypter!" id="encrypt" />
+                <input type="button" value="Dekrypter!" id="decrypt" />
+                <p id="res"></p>
+        
+                <script>
+        
+                    const alfaRaw = "abcdefghijklmnopqrstuvwxyzæøå";
+                    const alfa = alfaRaw.split("");
+        
+                    const alfaRawShift = "klmnopqrstuvwxyzæøåabcdefghij";
+                    const alfaShift = alfaRawShift.split("");
+        
+                    const input = document.getElementById("input");
+                    const encrypt = document.getElementById("encrypt");
+                    const decrypt = document.getElementById("decrypt");
+                    const res = document.getElementById("res");
+        
+        
+                    encrypt.onclick = () => {
+                        const value = input.value.toLowerCase().split("");
+                        ceaser(value, "encrypt");
+                    }
+        
+                    decrypt.onclick = () => {
+                        const value = input.value.toLowerCase().split("");
+                        ceaser(value, "decrypt");
+                    }
+        
+                    function ceaser(value, type) {
+        
+                        let result = "";
+        
+                        for (let i = 0; i < value.length; i++) {
+                            if (type == "encrypt") {
+                                let index = alfa.indexOf(value[i]);
+                                result += alfaShift[index];
+                            } else if (type == "decrypt") {
+                                let index = alfaShift.indexOf(value[i]);
+                                result += alfa[index];
+                            }
+                        }
+        
+                        res.innerHTML = result;
+                    }
+        
+        
+                </script>
+            </body>
+            
+
+
+            
+
+            <div class="clearer"><span></span></div>
+            <div class="bund">
+                
+            </div>
+        </div>
+    </body>
+</html>
