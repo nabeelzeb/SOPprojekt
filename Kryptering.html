@@ -93,14 +93,16 @@
 
                 }
 
+                var encrypted = "";
+
                 function codeFunction(val) {
-                    const encrypted = window.key.encrypt(val, 'base64');
+                    encrypted = window.key.encrypt(val, 'base64');
                     console.log(encrypted);
 
                 }
 
                 function decryptFunction(val) {
-                    const decrypt = window.key.decrypt("NvDtuaT73KvJ9XgVUtFSQaiXWyyyqu/eAZn4iEG/y1RMkRSp4qEWK/zAYnL8rnWNpjC7DL9UjiWWIGsmA+PunA==", 'base64');
+                    const decrypt = window.key.decrypt(encrypted, 'utf8');
                     console.log(decrypt);
 
                 }
