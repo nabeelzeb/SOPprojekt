@@ -37,7 +37,8 @@
 
             <ul>
                 <li><a href="Forside.html">Forside</a></li>
-                <li><a href="Kryptering.html">Kryptering</a></li>
+                <li><a href="Kryptering.html">RSA Kryptering</a></li>
+                <li><a href="Cæsar.html">Cæsar Kryptering</a></li>
 
             </ul>
 
@@ -53,7 +54,7 @@
             <br>
             <br>
 
-            <h1>Kryptering</h1>
+            <h1>RSA kryptering</h1>
 
             <br>
             <br>
@@ -68,9 +69,9 @@
             <br>
             <br>
 
-            Indsæt din tekst som du vil kryptere ind her: <input type="password" name="txt" onchange="codeFunction(this.value)">
+            Indsæt din tekst som du vil kryptere ind her: <input type="password" placeholder="Skriv her" onchange="codeFunction(this.value)">
 
-            Detrypter koden: <input type="text" name="text" onchange="decryptFunction(this.value)">
+            Detrypter koden: <input type="text" placeholder="Skriv her" onchange="decryptFunction(this.value)">
 
 
             <br>
@@ -81,7 +82,7 @@
             <br>
 
             <p id="test"> </p>
-        
+
 
             <script src='bundle.js'></script>
 
@@ -90,17 +91,17 @@
 
                 var encrypted = "";
 
-           
+
 
                 function codeFunction(val) {
                     encrypted = window.key.encrypt(val, 'base64');
                     console.log(encrypted);
-                    document.getElementById("test").innerHTML = encrypted;
+                    document.getElementById("test").innerHTML = "Den krypterede tekst:  " + encrypted;
 
 
                 }
 
-                
+
 
                 function decryptFunction(val) {
                     const decrypt = window.key.decrypt(encrypted, 'utf8');
@@ -108,24 +109,24 @@
 
                 }
 
-        
+
             </script>
 
-           
-
-            
-
-            
 
 
-         
-            
-            
-            
-            
-            </div>
 
-           
+
+
+
+
+
+
+
+
+
+        </div>
+
+
 
 
 </body>
