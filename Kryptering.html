@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Forside</title>
+
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Keywords, nøgleord for din side">
+    <meta name="description" content="Lav en beskrivelse af, hvad din side handlseer om">
+    <!-- Link til stylesheet responsive.css - det kan du ændre i -->
+    <link rel="stylesheet" type="text/css" href="responsive.css">
+    <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js%22%3E"> </script>
+</head>
+
+<body>
+
+
+    <!-- Her sættes "container" som en ramme for siden -->
+    <div class="container">
+        <!-- Her sættes "top" med et billede -->
+        <div class="top">
+            <img src="Billeder/hjemmeside logo.png" width="100%" height="100%" alt="" />
+        </div>
+        <!-- Her indsættes menuen - bemærk, der er ingen links - du skal selv oprette sider! -->
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+
+
+
+        <div class="menu">
+
+            <ul>
+                <li><a href="Forside.html">Forside</a></li>
+                <li><a href="Kryptering.html">Kryptering</a></li>
+
+            </ul>
+
+        </div>
+
+
+
+
+
+        <!--Vi sætter flere div for at i et html dokument for at det ikke er det samme der skal ske flere steder på hele siden, f.eks her vil have nogle ting i midten men måske senere have nogle ting til højre/ventre-->
+        <div class="midten">
+
+            <br>
+            <br>
+
+            <h1>Kryptering</h1>
+
+            <br>
+            <br>
+
+
+            <p>Dette login system er krypteret ved hjælp af RSA kryptering</p>
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+            Brugernavn: <input type="text" name="txt" onchange="nameFunction(this.value)">
+
+            Adgangskode: <input type="text" name="txt" onchange="codeFunction(this.value)">
+
+            Detrypter koden: <input type="text" name="txt" onchange="decryptFunction(this.value)">
+
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+
+
+
+            <script src='bundle.js'></script>
+
+            <script>
+                
+                function nameFunction(val) {
+
+                }
+
+                function codeFunction(val) {
+                    const encrypted = window.key.encrypt(val, 'base64');
+                    console.log(encrypted);
+
+                }
+
+                function decryptFunction(val) {
+                    const decrypt = window.key.decrypt("NvDtuaT73KvJ9XgVUtFSQaiXWyyyqu/eAZn4iEG/y1RMkRSp4qEWK/zAYnL8rnWNpjC7DL9UjiWWIGsmA+PunA==", 'base64');
+                    console.log(decrypt);
+
+                }
+
+
+
+            </script>
+
+
+
+            
+
+</body>
+
+
+
+
+
+<div class="clearer"><span></span></div>
+<div class="bund">
+
+</div>
+</div>
+</body>
+
+</html>

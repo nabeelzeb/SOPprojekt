@@ -1,0 +1,160 @@
+﻿/* Her sættes margin og padding til 0 - placerer alt i midten, uanset browsertype */
+*{
+    margin: 0;
+    padding:0;
+}
+
+
+/* Background-image angiver baggrunden */
+body {
+    background-image: url(Billeder/723451.jpg)
+}
+
+/*Sætter h1 til at være hvid */
+h1{
+    color: white;
+}
+
+/* Bestemmelser for attributten class = container - skaber en "container" som ramme */
+.container{
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-image: url(Billeder/bg.jpg)
+}
+
+/* Bestemmelser for attributten class = top - skaber en "top" øverst */
+.top{
+    width: 100%;
+    background-color: black;
+    height: 125px;
+    float: left;
+}
+
+/*Alt nede under er for er lave menuen,koden til menuen er fra internetet, alt credit går til youtuberen smashtheshell
+*/
+
+body, html{
+    font-size: 100%;
+    font-family: "Helvetica", sans-serif;
+}
+body,html{
+    margin:0;
+    padding: 0;
+}
+
+/* Bestemmelser for attributten class = venstre - skaber plads til indhold til venstre  */
+.venstre{
+    font-family: verdana;
+    font-size: 12px;
+    float: left;
+    width: 96%;
+    background-color: #002642;
+    color: white;
+    padding: 1% 2% 2% 2%;
+}
+
+/* Bestemmelser for attributten class = hoejre - skaber plads til højre */
+.hoejre{
+    float: right;
+    width: 30%;
+    background-color: 4F6D7A;
+}
+
+.midten{
+    width: 100%;
+    background-color: #002642;
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+    font-size: 14px;
+    
+    }
+
+    
+/* Bestemmelser for attributten class = clearer */
+
+.clearer {clear: both;}
+
+/* Bestemmelser for attributten class = bund  - skaber en "bund" nederst */
+.bund{
+    width: 100%;
+    background-color: black;
+    height: 50px;
+    float: left;
+}
+
+.button{
+    color: black;
+    font-family: verdana;
+    font-size: 14px;
+    text-align: center;
+    padding: 1%
+
+}
+
+.billed{
+    height: 10%;
+    width: 10%;
+       
+}
+
+.textsize12venstre{
+    width: 96%;
+    background-color: #002642;
+    text-align: left;
+    color: white;
+    font-family: sans-serif;
+    font-size: 12px;
+    padding: 2%;
+    
+    }
+
+.textsize13venstre{
+    width: 96%;
+    background-color: #002642;
+    text-align: left;
+    color: white;
+    font-family: sans-serif;
+    font-size: 13px;
+    padding: 2%;
+    }
+
+.boxed{
+    width: 40%;
+    background: black;
+    border: 20px solid blue; 
+    text-align: left;
+    padding: 50px;
+    margin: 30px;
+    
+    
+}
+
+.hyperlink{
+    color: #ff0000;
+    font-family: sans-serif;
+    font-size: 13;
+}
+
+.menu{
+    width: 97%;
+    background-color: black;
+    float: center;
+    padding: 1.5% 1.5% 1.5% 1.5%;
+}
+
+
+.menu li{
+    display: inline;
+    text-align: left;
+
+}
+
+.menu li a{
+    color: lightskyblue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    padding-left: 17%;
+}
