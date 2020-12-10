@@ -68,9 +68,7 @@
             <br>
             <br>
 
-            Brugernavn: <input type="text" name="txt" onchange="nameFunction(this.value)">
-
-            Adgangskode: <input type="text" name="txt" onchange="codeFunction(this.value)">
+            Indsæt din tekst som du vil kryptere ind her: <input type="text" name="txt" onchange="codeFunction(this.value)">
 
             Detrypter koden: <input type="text" name="txt" onchange="decryptFunction(this.value)">
 
@@ -83,15 +81,12 @@
             <br>
 
 
-
+        
 
             <script src='bundle.js'></script>
 
             <script>
-                
-                function nameFunction(val) {
 
-                }
 
                 var encrypted = "";
 
@@ -101,6 +96,8 @@
 
                 }
 
+                
+
                 function decryptFunction(val) {
                     const decrypt = window.key.decrypt(encrypted, 'utf8');
                     console.log(decrypt);
@@ -109,11 +106,13 @@
 
 
 
+
             </script>
 
+            <h1>"Dette er den krypterede kode: + encrypted</h1>
 
+           
 
-            
 
 </body>
 
