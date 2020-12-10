@@ -68,19 +68,19 @@
             <br>
             <br>
 
-            Indsæt din tekst som du vil kryptere ind her: <input type="text" name="txt" onchange="codeFunction(this.value)">
+            Indsæt din tekst som du vil kryptere ind her: <input type="password" name="txt" onchange="codeFunction(this.value)">
 
-            Detrypter koden: <input type="text" name="txt" onchange="decryptFunction(this.value)">
-
-
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
+            Detrypter koden: <input type="text" name="text" onchange="decryptFunction(this.value)">
 
 
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <p id="test"> </p>
         
 
             <script src='bundle.js'></script>
@@ -90,9 +90,13 @@
 
                 var encrypted = "";
 
+           
+
                 function codeFunction(val) {
                     encrypted = window.key.encrypt(val, 'base64');
                     console.log(encrypted);
+                    document.getElementById("test").innerHTML = encrypted;
+
 
                 }
 
@@ -104,12 +108,22 @@
 
                 }
 
-
-
-
+        
             </script>
 
-            <h1>"Dette er den krypterede kode: + encrypted</h1>
+           
+
+            
+
+            
+
+
+         
+            
+            
+            
+            
+            </div>
 
            
 

@@ -68,6 +68,7 @@ body,html{
     color: white;
     font-family: sans-serif;
     font-size: 14px;
+    word-break: break-all;
     
     }
 
