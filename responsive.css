@@ -7,7 +7,7 @@
 
 /* Background-image angiver baggrunden */
 body {
-    background-image: url(Billeder/723451.jpg)
+    background-image: url(billeder/code-1076536_1920.jpg)
 }
 
 /*Sætter h1 til at være hvid */
@@ -20,7 +20,7 @@ h1{
     width: 80%;
     margin-left: 10%;
     margin-right: 10%;
-    background-image: url(Billeder/bg.jpg)
+    background-image: url(Billeder/code-1076536_1920.jpg)
 }
 
 /* Bestemmelser for attributten class = top - skaber en "top" øverst */
@@ -139,10 +139,10 @@ body,html{
 }
 
 .menu{
-    width: 97%;
+    width: 96%;
     background-color: black;
     float: center;
-    padding: 1.5% 1.5% 1.5% 1.5%;
+    padding: 2% 2% 2% 2%;
 }
 
 
@@ -155,7 +155,7 @@ body,html{
 .menu li a{
     color: lightskyblue;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     text-decoration: none;
-    padding-left: 17%;
+    padding-left: 19%;
 }

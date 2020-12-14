@@ -19,7 +19,7 @@
     <div class="container">
         <!-- Her sættes "top" med et billede -->
         <div class="top">
-            <img src="Billeder/hjemmeside logo.png" width="100%" height="100%" alt="" />
+            <img src="Billeder/sop.png" width="100%" height="100%" alt="" />
         </div>
         <!-- Her indsættes menuen - bemærk, der er ingen links - du skal selv oprette sider! -->
 
@@ -69,7 +69,8 @@
             <br>
             <br>
 
-            Indsæt din tekst som du vil kryptere ind her: <input type="password" placeholder="Skriv her" onchange="codeFunction(this.value)">
+            Indsæt din tekst som du vil kryptere ind her: <input type="password" placeholder="Skriv her"
+                onchange="codeFunction(this.value)">
 
             Detrypter koden: <input type="text" placeholder="Skriv her" onchange="decryptFunction(this.value)">
 
@@ -90,6 +91,7 @@
 
 
                 var encrypted = "";
+                var decrypted = "";
 
 
 
@@ -101,11 +103,12 @@
 
                 }
 
+                
 
-
-                function decryptFunction(val) {
-                    const decrypt = window.key.decrypt(encrypted, 'utf8');
+                    function decryptFunction(val) {
+                    const decrypt = window.key.decrypt(val, 'utf8');
                     console.log(decrypt);
+                    document.getElementById("test").innerHTML = "Den dekrypterede tekst:  " + decrypt;
 
                 }
 
