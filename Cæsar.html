@@ -2,12 +2,12 @@
 <html>
 
 <head>
-    <title>Forside</title>
+    <title>Cæsar</title>
 
     <meta charset="UTF-8">
-    <meta name="keywords" content="Keywords, nøgleord for din side">
-    <meta name="description" content="Lav en beskrivelse af, hvad din side handlseer om">
-    <!-- Link til stylesheet responsive.css - det kan du ændre i -->
+    <!-- Google søgning, match-->
+    <meta name="description" content="Cæsar kryptering">
+    <!-- Her linkes til der css filen-->
     <link rel="stylesheet" type="text/css" href="responsive.css">
 </head>
 
@@ -18,7 +18,7 @@
         <div class="top">
             <img src="Billeder/sop.png" width="100%" height="100%" alt="" />
         </div>
-        <!-- Her indsættes menuen - bemærk, der er ingen links - du skal selv oprette sider! -->
+        <!-- Her indsættes menuen  -->
 
         <br>
         <br>
@@ -26,10 +26,6 @@
         <br>
         <br>
         <br>
-
-
-
-
 
         <div class="menu">
 
@@ -58,7 +54,7 @@
             <br>
 
 
-            <p>Dette login system er krypteret ved hjælp af cæsar kryptering</p>
+            <p>Krypter med cæsar ved at indtaste, din tekst i tekstfeltet</p>
 
             <br>
             <br>
@@ -67,18 +63,18 @@
             <br>
             <br>
 
-            Indsæt din tekst som du vil kryptere ind her: <input type="text" placeholder="Tekst" id="input" />
+            Indsæt din tekst som du vil kryptere ind her, og tryk på en af knapperne: <input type="text" placeholder="Tekst" id="input" />
             <input type="button" value="Krypter!" id="encrypt" />
             <input type="button" value="Dekrypter!" id="decrypt" />
             <p id="res"></p>
 
             <script>
 
-                const alfaRaw = "abcdefghijklmnopqrstuvwxyzæøå";
-                const alfa = alfaRaw.split("");
+                const alfaRaw = "abcdefghijklmnopqrstuvwxyzæøå"; //alfabetet 
+                const alfa = alfaRaw.split(""); // Laver array af alfabet
 
-                const alfaRawShift = "klmnopqrstuvwxyzæøåabcdefghij";
-                const alfaShift = alfaRawShift.split("");
+                const alfaRawShift = "klmnopqrstuvwxyzæøåabcdefghij"; // bogstavet flytter 10 gange til højre i alfabetet
+                const alfaShift = alfaRawShift.split("");// Laver array af omvendt alfabet
 
                 const input = document.getElementById("input");
                 const encrypt = document.getElementById("encrypt");
@@ -104,9 +100,9 @@
 
                 function ceaser(value, type) {
 
-                    let result = "";
+                    let result = ""; // resultat af kryptering/dekryptering
 
-                    for (let i = 0; i < value.length; i++) {
+                    for (let i = 0; i < value.length; i++) { // 
                         if (type == "encrypt") {
                             let index = alfa.indexOf(value[i]);
                             result += alfaShift[index];
