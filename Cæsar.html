@@ -109,9 +109,11 @@
                         if (type == "encrypt") {
                             let index = alfa.indexOf(value[i]);
                             result += alfaShift[index];
+                            console.log(result);
                         } else if (type == "decrypt") {
                             let index = alfaShift.indexOf(value[i]);
                             result += alfa[index];
+                            console.log(result);
                         }
                     }
 
