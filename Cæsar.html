@@ -40,7 +40,7 @@
 
 
 
-        <!--Vi sætter flere div for at i et html dokument for at det ikke er det samme der skal ske flere steder på hele siden, f.eks her vil have nogle ting i midten men måske senere have nogle ting til højre/ventre-->
+        
 
 
         <div class="midten">
@@ -62,10 +62,13 @@
             <br>
             <br>
             <br>
-
+            <!--Input felt-->
             Indsæt din tekst som du vil kryptere ind her, og tryk på en af knapperne: <input type="text" placeholder="Tekst" id="input" />
-            <input type="button" value="Krypter!" id="encrypt" />
+           <!-- Krypter knap-->
+            <input type="button" value="Krypter!" id="encrypt" /> 
+            <!-- Dekrypterknap-->
             <input type="button" value="Dekrypter!" id="decrypt" />
+            <!-- Tekst linje-->
             <p id="res"></p>
 
             <script>
@@ -76,7 +79,7 @@
                 const alfaRawShift = "klmnopqrstuvwxyzæøåabcdefghij"; // bogstavet flytter 10 gange til højre i alfabetet
                 const alfaShift = alfaRawShift.split("");// Laver array af omvendt alfabet
 
-                const input = document.getElementById("input");
+                const input = document.getElementById("input"); // input felt
                 const encrypt = document.getElementById("encrypt");
                 const decrypt = document.getElementById("decrypt");
                 const res = document.getElementById("res");
