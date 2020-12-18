@@ -70,7 +70,7 @@
             <br>
 
             Indsæt din tekst som du vil kryptere ind her og tryk enter,eller tryk ude fra feltet: <input type="password" placeholder="Skriv her"
-                onchange="codeFunction(this.value)">
+                onchange="encryptFunction(this.value)">
 
             Detrypter koden: <input type="text" placeholder="Skriv her" onchange="decryptFunction(this.value)">
 
@@ -95,7 +95,7 @@
 
 
 
-                function codeFunction(val) {
+                function encryptFunction(val) {
                     encrypted = window.key.encrypt(val, 'base64');
                     console.log(encrypted);
                     document.getElementById("test").innerHTML = "Den krypterede tekst:  " + encrypted;
